@@ -143,7 +143,7 @@
 				<text transform="matrix(0.9994 0 0 1 1161.6484 299.1145)" class="st7">Goles recibidos</text>
 			</g>
 			<g>
-				<text transform="matrix(0.9994 0 0 1 116.7919 366.4036)" class="st7">Remates recibidos</text> 
+				<text transform="matrix(0.9994 0 0 1 116.7919 366.4036)" class="st7">Remates recibidos</text>
 			</g>
 			<text transform="matrix(0.9994 0 0 1 478.0697 366.4036)" class="st5" id="Remates_recibidos_1">0</text>
 			<text transform="matrix(0.9994 0 0 1 931.7869 366.4036)" class="st5" id="Remates_recibidos_2">0</text>
@@ -161,12 +161,12 @@
 				<text transform="matrix(0.9994 0 0 1 1171.2749 433.6927)" class="st7">Recuperación</text>
 			</g>
 			<g>
-				<text transform="matrix(0.9994 0 0 1 144.3935 507.9993)" class="st7">Posesión</text>
+				<text transform="matrix(0.9994 0 0 1 144.3935 507.9993)" class="st7">Posesión (%)</text>
 			</g>
 			<text transform="matrix(0.9994 0 0 1 478.0697 507.9993)" class="st5" id="__posesion_de_balon_1">0</text>
 			<text transform="matrix(0.9994 0 0 1 931.7869 507.9993)" class="st5" id="__posesion_de_balon_2">0</text>
 			<g>
-				<text transform="matrix(0.9994 0 0 1 1172.2271 507.9993)" class="st7">Posesión</text>
+				<text transform="matrix(0.9994 0 0 1 1172.2271 507.9993)" class="st7">Posesión (%)</text>
 			</g>
 			<g>
 				<text transform="matrix(0.9994 0 0 1 102.9064 575.2883)" class="st7">Acierto en pases (%)</text>
@@ -178,11 +178,11 @@
 			</g>
 			<text transform="matrix(0.9994 0 0 1 931.7869 640.5969)" class="st5" id="Pases_por_posesion_1">0</text>
 			<g>
-				<text transform="matrix(0.9994 0 0 1 94.3933 639.6836)" class="st7">Pases por posesión (%)</text>
+				<text transform="matrix(0.9994 0 0 1 94.3933 639.6836)" class="st7">Pases por posesión</text>
 			</g>
 			<text transform="matrix(0.9994 0 0 1 478.0697 640.6836)" class="st5" id="Pases_por_posesion_2">0</text>
 			<g>
-				<text transform="matrix(0.9994 0 0 1 1120.2273 639.6836)" class="st7">Pases por posesión (%)</text>
+				<text transform="matrix(0.9994 0 0 1 1120.2273 639.6836)" class="st7">Pases por posesión</text>
 			</g>
 		</svg>
 
@@ -292,12 +292,12 @@ let logosClubes = {
 						document.getElementById("Remates_recibidos_2").innerHTML = replaceDotWithComma(data.Remates_recibidos_2);
 						document.getElementById("Recuperaciones_en_campo_rival_1").innerHTML = replaceDotWithComma(data.Recuperaciones_en_campo_rival_1);
 						document.getElementById("Recuperaciones_en_campo_rival_2").innerHTML = replaceDotWithComma(data.Recuperaciones_en_campo_rival_2);
-						document.getElementById("__posesion_de_balon_1").innerHTML = replaceDotWithComma(data.__posesion_de_balon_1);
-						document.getElementById("__posesion_de_balon_2").innerHTML = replaceDotWithComma(data.__posesion_de_balon_2);
+						document.getElementById("__posesion_de_balon_1").innerHTML = replaceDotWithComma(data.__posesion_de_balon_1) + "%";
+						document.getElementById("__posesion_de_balon_2").innerHTML = replaceDotWithComma(data.__posesion_de_balon_2) + "%";
 						document.getElementById("__acierto_en_pases_1").innerHTML = replaceDotWithComma(data.__acierto_en_pases_1) + "%";
 						document.getElementById("__acierto_en_pases_2").innerHTML = replaceDotWithComma(data.__acierto_en_pases_2) + "%";
-						document.getElementById("Pases_por_posesion_1").innerHTML = replaceDotWithComma(data.Pases_por_posesion_1) + "%";
-						document.getElementById("Pases_por_posesion_2").innerHTML = replaceDotWithComma(data.Pases_por_posesion_2) + "%";
+						document.getElementById("Pases_por_posesion_1").innerHTML = replaceDotWithComma(data.Pases_por_posesion_1);
+						document.getElementById("Pases_por_posesion_2").innerHTML = replaceDotWithComma(data.Pases_por_posesion_2);
 
 						if (coloresClubes[data.Equipo_1]) {
 							let rectsEquipo1 = document.querySelectorAll('.st0');
