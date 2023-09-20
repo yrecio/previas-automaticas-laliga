@@ -176,6 +176,7 @@
 				<text transform="matrix(0.9994 0 0 1 1120.2273 639.6836)" class="st7">Pases por posesión (%)</text>
 			</g>
 		</svg>
+
 		<img src="img/ofensivo.jpg"
 			style="width:338.1; height:201.9; z-index: 2;transform: translate(1950px, -2520px); scale:0.72">
 		<img src="img/defensivo.jpg"
@@ -189,17 +190,26 @@
 			<img src="img/logoepdata.jpg" style="width: 350px;" />
 		</footer>
 
+		</main>
 
-		<div id="linkContainer" style="text-align: center; margin-top: 20px; transform: translateY(-600px)">
+		<div style="padding-top: 100px; width: 3934px">
+
+		<div id="linkContainer" style="text-align: center; margin-top: 20px;">
 			<a id="descargarImagen" href="#" download="portada_previa.jpg" style="font-size:60px">Descargar imagen de la
 				previa</a>
 		</div>
 
 		<div
-			style="text-align: center; margin-top: 20px; transform: translateY(-500px); padding-bottom: 50rem; display: flex; align-items: center; justify-content: center;">
-			<textarea id="jsonData" style="width: 40%; height: 900px; margin-top: 20px; font-size:60px"></textarea>
-			<button id="updateContent" style="font-size:60px; margin: 50px;">Actualizar contenido</button>
+			style="text-align: center; margin-top: 20px; padding-bottom: 50rem; display: flex; align-items: center; justify-content: center;">
+			<textarea id="datosJSON" style="width: 40%; height: 900px; margin-top: 20px; font-size:60px"></textarea>
+			<button id="actualizarContenido" style="font-size:60px; margin: 50px;">Actualizar contenido</button>
 		</div>
+
+		</div>
+
+<script>
+
+</script>
 
 		<script>
 
@@ -252,14 +262,20 @@
 				"UD Las Palmas": 'img/logos-clubes/palmas.svg',
 			};
 
-			document.getElementById("updateContent").addEventListener("click", function () {
-				let jsonData = document.getElementById("jsonData").value;
-
-				if (jsonData) {
-					try {
-						let data = JSON.parse(jsonData);
-
-						document.getElementById("titulo").innerHTML = data.Equipo_1 + " vs " + data.Equipo_2;
+			document.getElementById("actualizarContenido").addEventListener("click", function () {
+    let jsonData = document.getElementById("datosJSON").value;
+    if (jsonData) {
+        fetch('datos.json', {
+            method: 'POST',
+            body: JSON.stringify({data: jsonData}),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+				document.getElementById("titulo").innerHTML = data.Equipo_1 + " vs " + data.Equipo_2;
 						document.getElementById("Goles_1").innerHTML = replaceDotWithComma(data.Goles_1);
 						document.getElementById("Goles_2").innerHTML = replaceDotWithComma(data.Goles_2);
 						document.getElementById("Goles_esperados_1").innerHTML = replaceDotWithComma(data.Goles_esperados_1);
@@ -300,20 +316,22 @@
 						if (logosClubes[data.Equipo_2]) {
 							document.getElementById("escudo2").src = logosClubes[data.Equipo_2];
 						}
-
-					} catch (e) {
-						console.error("Error al parsear el JSON:", e);
-					}
-				} else {
-					console.log("Por favor, introduce datos en el textarea");
-				}
-			});
+            } else {
+                console.error("Error al guardar los datos.");
+            }
+        })
+        .catch(error => {
+            console.error("Error:", error);
+        });
+    } else {
+        console.log("Por favor, introduce datos en el textarea");
+    }
+});
 
 		</script>
 
 		<script src="https://cdn.jsdelivr.net/npm/dom-to-image@2.6.0/dist/dom-to-image.min.js"></script>
 		<script>
-
 			window.onload = function () {
 				let mainElement = document.querySelector('main');
 				let descargarImagenLink = document.getElementById('descargarImagen');
