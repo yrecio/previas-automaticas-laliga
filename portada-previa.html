@@ -7,7 +7,16 @@
 	<title>Previa LaLiga</title>
 </head>
 
-<body>
+
+<body style="transform-origin: left top; transform: scale(0.4)">
+	
+	<div id="login" style="transform-origin: left top; transform: scale(3); padding: 15rem">
+		<input type="password" id="passwordInput">
+		<button onclick="checkPassword()">Entrar</button>
+	</div>
+	
+	<div id="content" style="display:none;">
+
 	<main style="width: 3934px; height: 2215px; background-color: white; padding-top: 60px; border: 0.2px solid black;">
 		<div
 			style="height: 355px; width: 100%; display: flex; justify-content: space-around; align-items:center; transform: scale(0.95)">
@@ -184,6 +193,7 @@
 		<img src="img/distribucion.jpg"
 			style="width:338.1; height:201.9; z-index: 2;transform: translate(-1194px, -1118px); scale:0.72">
 		<footer style="display: flex; justify-content: space-around; transform: translateY(-800px)">
+
 			<p style="font-size:65px; font-family: Heebo; color: #00bcd4; margin: 0px; width: 50%">Datos de
 				<b>Driblab</b>
 			</p>
@@ -194,22 +204,18 @@
 
 		<div style="padding-top: 100px; width: 3934px">
 
-		<div id="linkContainer" style="text-align: center; margin-top: 20px;">
-			<a id="descargarImagen" href="#" download="portada_previa.jpg" style="font-size:60px">Descargar imagen de la
-				previa</a>
-		</div>
-
 		<div
 			style="text-align: center; margin-top: 20px; padding-bottom: 50rem; display: flex; align-items: center; justify-content: center;">
-			<textarea id="datosJSON" style="width: 40%; height: 900px; margin-top: 20px; font-size:60px"></textarea>
-			<button id="actualizarContenido" style="font-size:60px; margin: 50px;">Actualizar contenido</button>
+			<textarea id="jsonData" style="width: 40%; height: 900px; margin-top: 20px; font-size:60px"></textarea>
+			<button id="updateContent" style="font-size:60px; margin: 50px;">Actualizar contenido</button>
 		</div>
 
 		</div>
 
-<script>
+	</div>
 
-</script>
+		<script src="main.js"></script>
+
 
 		<script>
 
@@ -262,20 +268,14 @@
 				"UD Las Palmas": 'img/logos-clubes/palmas.svg',
 			};
 
-			document.getElementById("actualizarContenido").addEventListener("click", function () {
-    let jsonData = document.getElementById("datosJSON").value;
-    if (jsonData) {
-        fetch('datos.json', {
-            method: 'POST',
-            body: JSON.stringify({data: jsonData}),
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-				document.getElementById("titulo").innerHTML = data.Equipo_1 + " vs " + data.Equipo_2;
+			document.getElementById("updateContent").addEventListener("click", function () {
+				let jsonData = document.getElementById("jsonData").value;
+
+				if (jsonData) {
+					try {
+						let data = JSON.parse(jsonData);
+
+						document.getElementById("titulo").innerHTML = data.Equipo_1 + " vs " + data.Equipo_2;
 						document.getElementById("Goles_1").innerHTML = replaceDotWithComma(data.Goles_1);
 						document.getElementById("Goles_2").innerHTML = replaceDotWithComma(data.Goles_2);
 						document.getElementById("Goles_esperados_1").innerHTML = replaceDotWithComma(data.Goles_esperados_1);
@@ -316,44 +316,17 @@
 						if (logosClubes[data.Equipo_2]) {
 							document.getElementById("escudo2").src = logosClubes[data.Equipo_2];
 						}
-            } else {
-                console.error("Error al guardar los datos.");
-            }
-        })
-        .catch(error => {
-            console.error("Error:", error);
-        });
-    } else {
-        console.log("Por favor, introduce datos en el textarea");
-    }
-});
+
+					} catch (e) {
+						console.error("Error al parsear el JSON:", e);
+					}
+				} else {
+					console.log("Por favor, introduce datos en el textarea");
+				}
+			});
 
 		</script>
 
-		<script src="https://cdn.jsdelivr.net/npm/dom-to-image@2.6.0/dist/dom-to-image.min.js"></script>
-		<script>
-			window.onload = function () {
-				let mainElement = document.querySelector('main');
-				let descargarImagenLink = document.getElementById('descargarImagen');
-				let linkContainer = document.getElementById('linkContainer');
-
-				// Ocultar el contenedor del enlace
-				linkContainer.style.display = 'none';
-
-				domtoimage.toPng(mainElement)
-					.then(function (dataUrl) {
-						descargarImagenLink.href = dataUrl;
-						// Mostrar el contenedor del enlace nuevamente
-						linkContainer.style.display = 'block';
-					})
-					.catch(function (error) {
-						// En caso de error, también mostramos el contenedor del enlace nuevamente
-						linkContainer.style.display = 'block';
-						console.error('Error al convertir en imagen:', error);
-					});
-			
-				};
-				</script>
 </body>
 
 </html>
