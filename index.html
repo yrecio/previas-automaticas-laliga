@@ -5,12 +5,14 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Previa LaLiga</title>
-	<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;300;400;500;700;900&display=swap"
+		rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.3/html2canvas.min.js"></script>
 </head>
 
 <body>
-	
-<!-- <div id="login" style="padding: 15rem">
+
+	<!-- <div id="login" style="padding: 15rem">
 		<input type="password" id="passwordInput">
 		<button onclick="checkPassword()">Entrar</button>
 	</div> 
@@ -18,35 +20,39 @@
 <div id="content" style="display:none;">-->
 
 	<main style="width: 1660px; height:928px; background-color: white; text-align: center; border: 0.2px solid black;">
-		<div style="z-index: 1; height: 13%; margin: 30px 1rem 6px 1rem; display: flex; justify-content: space-around; align-items:center;">
-			
+		<div id="titulos"
+			style="z-index: 1; height: 13%; margin: 30px 1rem 6px 1rem; display: flex; justify-content: space-around; align-items:center;">
+
 			<div style="width:23%; height: 100%; z-index: 2;">
-			<img id="escudo1" style="transform:translate(-77px, 1px);z-index:2; height: 171%;" />
+				<img id="escudo1" style="transform:translate(-77px, 1px);z-index:2; height: 171%;" />
 			</div>
 			<div id="bloque-titulos" style="display:flex; flex-direction: column">
-				<h3 id="antetitulo" style="color: #b8b8b8; font-family: 'Heebo'; font-size: 1.5rem; margin: 0; width: 100%;">
-					<span id="dia-semana" style="text-transform: capitalize">Antetítulo</span><span id="resto-antetitulo"></span>
+				<h3 id="antetitulo"
+					style="color: #b8b8b8; font-family: 'Heebo'; font-size: 1.5rem; margin: 0; width: 100%;">
+					<span id="dia-semana" style="text-transform: capitalize">Antetítulo</span><span
+						id="resto-antetitulo"></span>
 				</h3>
-				<h2 id="titulo" style="color: #020202; font-family: 'Heebo'; font-size: 2.5rem; margin: 0; width: 100%;">
+				<h2 id="titulo"
+					style="color: #020202; font-family: 'Heebo'; font-size: 2.5rem; margin: 0; width: 100%;">
 					Título Principal
 				</h2>
-				<h3 id="subtitulo" style="color: #5e5e5e; font-family: 'Heebo'; font-size: 1.5rem; margin: 0; width: 100%;">
+				<h3 id="subtitulo"
+					style="color: #5e5e5e; font-family: 'Heebo'; font-size: 1.5rem; margin: 0; width: 100%;">
 					Estadísticas por partido
 				</h3>
 			</div>
 			<div style="width:23%; height: 100%; z-index: 2;">
-			<img id="escudo2" style="height: 171%;transform: translate(85px, 1px);"/>
+				<img id="escudo2" style="height: 171%;transform: translate(85px, 1px);" />
 			</div>
 		</div>
-		
+		<div id="bloque-svg" style="width: 90%; margin:auto; height: 700px">
+
 		<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" version="1.1" x="0px" y="0px"
 			viewBox="0 0 1463.4 665.5" style="enable-background:new 0 0 1463.4 665.5;" xml:space="preserve">
 
 			<style type="text/css">
 				#Capa_1 {
-					padding:2.5rem;
-					transform: translateY(-70px);
-					z-index:2;
+					
 				}
 
 				.st0 {
@@ -89,7 +95,7 @@
 					font-size: 25.1934px;
 					text-align: center;
 					width: 4rem;
-					fill:white;
+					fill: white;
 					text-shadow: 2px 0px 1px rgba(0, 0, 0, 0.5);
 				}
 
@@ -98,7 +104,7 @@
 					font-size: 25.1934px;
 					text-align: right;
 					width: 4rem;
-					fill:white;
+					fill: white;
 					text-shadow: 2px 0px 1px rgba(0, 0, 0, 0.5);
 				}
 
@@ -107,7 +113,7 @@
 					font-family: 'Heebo';
 					text-align: center;
 					font-weight: bold;
-					fill:white;
+					fill: white;
 					text-shadow: 2px 0px 1px rgba(0, 0, 0, 0.5);
 				}
 
@@ -123,7 +129,6 @@
 					fill: #ffffff;
 					opacity: 0.5;
 				}
-
 			</style>
 			<rect x="1.1" y="45.5" class="st0" width="562.1" height="201.9" />
 			<rect x="901.3" y="45.5" class="st2" width="562.1" height="201.9" />
@@ -190,8 +195,10 @@
 			<g>
 				<text transform="matrix(0.9994 0 0 1 224.4413 433.6927)" class="st7">Recuperaciones</text>
 			</g>
-			<text transform="matrix(0.9994 0 0 1 478.0697 433.6927)" class="st5" id="Recuperaciones_en_campo_rival_1">0</text>
-			<text transform="matrix(0.9994 0 0 1 940.7869 433.6927)" class="st6" id="Recuperaciones_en_campo_rival_2">0</text>
+			<text transform="matrix(0.9994 0 0 1 478.0697 433.6927)" class="st5"
+				id="Recuperaciones_en_campo_rival_1">0</text>
+			<text transform="matrix(0.9994 0 0 1 940.7869 433.6927)" class="st6"
+				id="Recuperaciones_en_campo_rival_2">0</text>
 			<g>
 				<text transform="matrix(0.9994 0 0 1 1060.2749 433.6927)" class="st7">Recuperaciones</text>
 			</g>
@@ -221,23 +228,26 @@
 			</g>
 		</svg>
 
-		<img src="img/ofensivo.jpg"
-			style="width: 364px; z-index: 2; transform: translate(367.6px, -783px);">
-		<img src="img/defensivo.jpg"
-			style="width: 363px; z-index: 2; transform: translate(0px, -558.6px);">
-		<img src="img/distribucion.jpg"
-			style="width: 363px; z-index: 2; transform: translate(-367.8px, -333px);">
+		<div id="imagenes-centrales" style="width: 364px;transform: translate(566px, -659px) scale(0.94);">
+		<img src="img/ofensivo.jpg" style="width: 364px; z-index: 2; margin-bottom:0.2rem">
+		<img src="img/defensivo.jpg" style="width: 364px; z-index: 2; margin-bottom:0.2rem">
+		<img src="img/distribucion.jpg" style="width: 363px; z-index: 2;">
+		</div>
 
-		<footer style="display: flex; justify-content: space-around; transform: translateY(-310px)">
+	</div>
+
+		<footer style="display: flex; justify-content: space-around">
 			<p style="font-size:1.5rem; font-family: Heebo; color: #00bcd4; margin: 0px">Datos de
 				<b>Driblab</b>
 			</p>
 			<img src="img/logoepdata.jpg" style="width: 7rem;" />
 		</footer>
 
-		</main>
+	</main>
 
-		<div style="padding-top: 100px; width: 1024px">
+	<button id="descarga-imagen">Descargar imagen</button>
+
+	<div style="padding-top: 100px; width: 1024px">
 
 		<div
 			style="text-align: center; margin-top: -50px; padding-bottom: 10rem; display: flex; align-items: center; justify-content: center;">
@@ -245,128 +255,144 @@
 			<button id="updateContent" style="font-size:1rem; margin: 1.2rem;">Actualizar contenido</button>
 		</div>
 
-		</div>
+	</div>
 
 	</div>
 
-		<script src="main.js"></script>
+	<script src="main.js"></script>
 
 
-		<script>
+	<script>
 
-			function replaceDotWithComma(value) {
-				if (typeof value === 'string' || typeof value === 'number') {
-					return String(value).replace('.', ',');
-				}
-				return value;
+		function replaceDotWithComma(value) {
+			if (typeof value === 'string' || typeof value === 'number') {
+				return String(value).replace('.', ',');
 			}
+			return value;
+		}
 
-			let coloresClubes = {
-    "Alavés": "#0B37A2",
-    "Girona": "#CF172F",
-    "Osasuna": "#BC131A",
-    "Barcelona": "#004999",
-    "Almería": "#ED1B24",
-    "Real Sociedad": "#0067B1",
-    "Rayo Vallecano": "#BFAE30",
-    "Las Palmas": "#FFE400",
-    "Real Betis": "#00954C",
-    "Atlético de Madrid": "#CB3524",
-    "Athletic Club": "#E20A17",
-    "Mallorca": "#C20E1A",
-    "Sevilla": "#D70F21",
-    "Celta de Vigo": "#6CADE5",
-    "Valencia": "#ff671f", 
-    "Getafe": "#006DAF",
-    "Villarreal": "#00366b", 
-    "Granada": "#C31632",
-    "Cádiz": "#0045A7",
-    "Real Madrid": "#7d5e9b",
-};
+		let coloresClubes = {
+			"Alavés": "#0B37A2",
+			"Girona": "#CF172F",
+			"Osasuna": "#BC131A",
+			"Barcelona": "#004999",
+			"Almería": "#ED1B24",
+			"Real Sociedad": "#0067B1",
+			"Rayo Vallecano": "#BFAE30",
+			"Las Palmas": "#FFE400",
+			"Real Betis": "#00954C",
+			"Atlético de Madrid": "#CB3524",
+			"Athletic Club": "#E20A17",
+			"Mallorca": "#C20E1A",
+			"Sevilla": "#D70F21",
+			"Celta de Vigo": "#6CADE5",
+			"Valencia": "#ff671f",
+			"Getafe": "#006DAF",
+			"Villarreal": "#00366b",
+			"Granada": "#C31632",
+			"Cádiz": "#0045A7",
+			"Real Madrid": "#7d5e9b",
+		};
 
-let logosClubes = {
-    "Alavés": 'img/logos-clubes/alaves.svg',
-    "Girona": 'img/logos-clubes/girona.svg',
-    "Osasuna": 'img/logos-clubes/osasuna.svg',
-    "Barcelona": 'img/logos-clubes/barcelona.svg',
-    "Almería": 'img/logos-clubes/ud-almeria.svg',
-    "Real Sociedad": 'img/logos-clubes/realsociedad.svg',
-    "Rayo Vallecano": 'img/logos-clubes/rayo.svg',
-    "Las Palmas": 'img/logos-clubes/palmas.svg',
-    "Real Betis": 'img/logos-clubes/realbetis.svg',
-    "Atlético de Madrid": 'img/logos-clubes/atletico.svg',
-    "Athletic Club": 'img/logos-clubes/athletic.svg',
-    "Mallorca": 'img/logos-clubes/mallorca.svg',
-    "Sevilla": 'img/logos-clubes/sevilla.svg',
-    "Celta de Vigo": 'img/logos-clubes/celta.svg',
-    "Valencia": 'img/logos-clubes/valencia.svg', 
-    "Getafe": 'img/logos-clubes/getafe.svg',
-    "Villarreal": 'img/logos-clubes/villareal.svg',  
-    "Granada": 'img/logos-clubes/granada.svg',
-    "Cádiz": 'img/logos-clubes/cadiz.svg',
-    "Real Madrid": 'img/logos-clubes/realmadrid.svg',
-};
+		let logosClubes = {
+			"Alavés": 'https://yrecio.github.io/previas-automaticas-laliga/img/logos-clubes/alaves.svg',
+			"Girona": 'https://yrecio.github.io/previas-automaticas-laliga/img/logos-clubes/girona.svg',
+			"Osasuna": 'https://yrecio.github.io/previas-automaticas-laliga/img/logos-clubes/osasuna.svg',
+			"Barcelona": 'https://yrecio.github.io/previas-automaticas-laliga/img/logos-clubes/barcelona.svg',
+			"Almería": 'https://yrecio.github.io/previas-automaticas-laliga/img/logos-clubes/ud-almeria.svg',
+			"Real Sociedad": 'https://yrecio.github.io/previas-automaticas-laliga/img/logos-clubes/realsociedad.svg',
+			"Rayo Vallecano": 'https://yrecio.github.io/previas-automaticas-laliga/img/logos-clubes/rayo.svg',
+			"Las Palmas": 'https://yrecio.github.io/previas-automaticas-laliga/img/logos-clubes/palmas.svg',
+			"Real Betis": 'https://yrecio.github.io/previas-automaticas-laliga/img/logos-clubes/realbetis.svg',
+			"Atlético de Madrid": 'https://yrecio.github.io/previas-automaticas-laliga/img/logos-clubes/atletico.svg',
+			"Athletic Club": 'https://yrecio.github.io/previas-automaticas-laliga/img/logos-clubes/athletic.svg',
+			"Mallorca": 'https://yrecio.github.io/previas-automaticas-laliga/img/logos-clubes/mallorca.svg',
+			"Sevilla": 'https://yrecio.github.io/previas-automaticas-laliga/img/logos-clubes/sevilla.svg',
+			"Celta de Vigo": 'https://yrecio.github.io/previas-automaticas-laliga/img/logos-clubes/celta.svg',
+			"Valencia": 'https://yrecio.github.io/previas-automaticas-laliga/img/logos-clubes/valencia.svg',
+			"Getafe": 'https://yrecio.github.io/previas-automaticas-laliga/img/logos-clubes/getafe.svg',
+			"Villarreal": 'https://yrecio.github.io/previas-automaticas-laliga/img/logos-clubes/villareal.svg',
+			"Granada": 'https://yrecio.github.io/previas-automaticas-laliga/img/logos-clubes/granada.svg',
+			"Cádiz": 'https://yrecio.github.io/previas-automaticas-laliga/img/logos-clubes/cadiz.svg',
+			"Real Madrid": 'https://yrecio.github.io/previas-automaticas-laliga/img/logos-clubes/realmadrid.svg',
+		};
 
-			document.getElementById("updateContent").addEventListener("click", function () {
-				let jsonData = document.getElementById("jsonData").value;
+		document.getElementById("updateContent").addEventListener("click", function () {
+			let jsonData = document.getElementById("jsonData").value;
 
-				if (jsonData) {
-					try {
-						let data = JSON.parse(jsonData);
+			if (jsonData) {
+				try {
+					let data = JSON.parse(jsonData);
 
-						document.getElementById("dia-semana").innerHTML = data.Dia;
-						document.getElementById("resto-antetitulo").innerHTML = " a las " + data.Hora + " horas";
-						document.getElementById("titulo").innerHTML = data.Equipo_1 + " vs " + data.Equipo_2;
-						document.getElementById("Goles_1").innerHTML = replaceDotWithComma(data.Goles_1);
-						document.getElementById("Goles_2").innerHTML = replaceDotWithComma(data.Goles_2);
-						document.getElementById("Goles_esperados_1").innerHTML = replaceDotWithComma(data.Goles_esperados_1);
-						document.getElementById("Goles_esperados_2").innerHTML = replaceDotWithComma(data.Goles_esperados_2);
-						document.getElementById("Remates_1").innerHTML = replaceDotWithComma(data.Remates_1);
-						document.getElementById("Remates_2").innerHTML = replaceDotWithComma(data.Remates_2);
-						document.getElementById("Goles_recibidos_1").innerHTML = replaceDotWithComma(data.Goles_recibidos_1);
-						document.getElementById("Goles_recibidos_2").innerHTML = replaceDotWithComma(data.Goles_recibidos_2);
-						document.getElementById("Remates_recibidos_1").innerHTML = replaceDotWithComma(data.Remates_recibidos_1);
-						document.getElementById("Remates_recibidos_2").innerHTML = replaceDotWithComma(data.Remates_recibidos_2);
-						document.getElementById("Recuperaciones_en_campo_rival_1").innerHTML = replaceDotWithComma(data.Recuperaciones_en_campo_rival_1);
-						document.getElementById("Recuperaciones_en_campo_rival_2").innerHTML = replaceDotWithComma(data.Recuperaciones_en_campo_rival_2);
-						document.getElementById("__posesion_de_balon_1").innerHTML = replaceDotWithComma(data.__posesion_de_balon_1) + "%";
-						document.getElementById("__posesion_de_balon_2").innerHTML = replaceDotWithComma(data.__posesion_de_balon_2) + "%";
-						document.getElementById("__acierto_en_pases_1").innerHTML = replaceDotWithComma(data.__acierto_en_pases_1) + "%";
-						document.getElementById("__acierto_en_pases_2").innerHTML = replaceDotWithComma(data.__acierto_en_pases_2) + "%";
-						document.getElementById("Pases_por_posesion_1").innerHTML = replaceDotWithComma(data.Pases_por_posesion_1);
-						document.getElementById("Pases_por_posesion_2").innerHTML = replaceDotWithComma(data.Pases_por_posesion_2);
+					document.getElementById("dia-semana").innerHTML = data.Dia;
+					document.getElementById("resto-antetitulo").innerHTML = " a las " + data.Hora + " horas";
+					document.getElementById("titulo").innerHTML = data.Equipo_1 + " vs " + data.Equipo_2;
+					document.getElementById("Goles_1").innerHTML = replaceDotWithComma(data.Goles_1);
+					document.getElementById("Goles_2").innerHTML = replaceDotWithComma(data.Goles_2);
+					document.getElementById("Goles_esperados_1").innerHTML = replaceDotWithComma(data.Goles_esperados_1);
+					document.getElementById("Goles_esperados_2").innerHTML = replaceDotWithComma(data.Goles_esperados_2);
+					document.getElementById("Remates_1").innerHTML = replaceDotWithComma(data.Remates_1);
+					document.getElementById("Remates_2").innerHTML = replaceDotWithComma(data.Remates_2);
+					document.getElementById("Goles_recibidos_1").innerHTML = replaceDotWithComma(data.Goles_recibidos_1);
+					document.getElementById("Goles_recibidos_2").innerHTML = replaceDotWithComma(data.Goles_recibidos_2);
+					document.getElementById("Remates_recibidos_1").innerHTML = replaceDotWithComma(data.Remates_recibidos_1);
+					document.getElementById("Remates_recibidos_2").innerHTML = replaceDotWithComma(data.Remates_recibidos_2);
+					document.getElementById("Recuperaciones_en_campo_rival_1").innerHTML = replaceDotWithComma(data.Recuperaciones_en_campo_rival_1);
+					document.getElementById("Recuperaciones_en_campo_rival_2").innerHTML = replaceDotWithComma(data.Recuperaciones_en_campo_rival_2);
+					document.getElementById("__posesion_de_balon_1").innerHTML = replaceDotWithComma(data.__posesion_de_balon_1) + "%";
+					document.getElementById("__posesion_de_balon_2").innerHTML = replaceDotWithComma(data.__posesion_de_balon_2) + "%";
+					document.getElementById("__acierto_en_pases_1").innerHTML = replaceDotWithComma(data.__acierto_en_pases_1) + "%";
+					document.getElementById("__acierto_en_pases_2").innerHTML = replaceDotWithComma(data.__acierto_en_pases_2) + "%";
+					document.getElementById("Pases_por_posesion_1").innerHTML = replaceDotWithComma(data.Pases_por_posesion_1);
+					document.getElementById("Pases_por_posesion_2").innerHTML = replaceDotWithComma(data.Pases_por_posesion_2);
 
-						if (coloresClubes[data.Equipo_1]) {
-							let rectsEquipo1 = document.querySelectorAll('.st0');
-							rectsEquipo1.forEach(rect => {
-								rect.style.fill = coloresClubes[data.Equipo_1];
-							});
-						}
-
-						if (coloresClubes[data.Equipo_2]) {
-							let rectsEquipo2 = document.querySelectorAll('.st2');
-							rectsEquipo2.forEach(rect => {
-								rect.style.fill = coloresClubes[data.Equipo_2];
-							});
-						}
-
-						if (logosClubes[data.Equipo_1]) {
-							document.getElementById("escudo1").src = logosClubes[data.Equipo_1];
-						}
-
-						if (logosClubes[data.Equipo_2]) {
-							document.getElementById("escudo2").src = logosClubes[data.Equipo_2];
-						}
-
-					} catch (e) {
-						console.error("Error al parsear el JSON:", e);
+					if (coloresClubes[data.Equipo_1]) {
+						let rectsEquipo1 = document.querySelectorAll('.st0');
+						rectsEquipo1.forEach(rect => {
+							rect.style.fill = coloresClubes[data.Equipo_1];
+						});
 					}
-				} else {
-					console.log("Por favor, introduce datos en el textarea");
-				}
-			});
 
-		</script>
+					if (coloresClubes[data.Equipo_2]) {
+						let rectsEquipo2 = document.querySelectorAll('.st2');
+						rectsEquipo2.forEach(rect => {
+							rect.style.fill = coloresClubes[data.Equipo_2];
+						});
+					}
+
+					if (logosClubes[data.Equipo_1]) {
+						document.getElementById("escudo1").src = logosClubes[data.Equipo_1];
+					}
+
+					if (logosClubes[data.Equipo_2]) {
+						document.getElementById("escudo2").src = logosClubes[data.Equipo_2];
+					}
+
+				} catch (e) {
+					console.error("Error al parsear el JSON:", e);
+				}
+			} else {
+				console.log("Por favor, introduce datos en el textarea");
+			}
+		});
+
+		document.getElementById("descarga-imagen").addEventListener("click", function () {
+			// Obtener el elemento que queremos capturar
+			let main = document.querySelector("main");
+
+			// Usar html2canvas para obtener el canvas del elemento
+			html2canvas(main).then(canvas => {
+				// Crear un elemento <a> para la descarga
+				let a = document.createElement("a");
+				a.href = canvas.toDataURL("image/jpg");
+				a.download = "previa.jpg";
+
+				// Simular un click en el enlace para iniciar la descarga
+				a.click();
+			});
+		});
+
+	</script>
 
 </body>
 
