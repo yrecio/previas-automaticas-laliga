@@ -1,0 +1,84 @@
+{
+    "Goles": [
+      {
+        "Jugador": "Lewandowski",
+        "Cifra": 4,
+        "Equipo": "Barcelona"
+      },
+      {
+        "Jugador": "Raphinha",
+        "Cifra": 3,
+        "Equipo": "Barcelona"
+      },
+      {
+        "Jugador": "O. Sancet",
+        "Cifra": 2,
+        "Equipo": "Athletic Club"
+      },
+      {
+        "Jugador": "Llorente",
+        "Cifra": 2,
+        "Equipo": "Atlético de Madrid"
+      },
+      {
+        "Jugador": "Mingueza",
+        "Cifra": 2,
+        "Equipo": "Celta de Vigo"
+      }
+    ],
+    "Asistencias": [
+      {
+        "Jugador": "Vinicius Junior",
+        "Cifra": 15,
+        "Equipo": "Real Madrid"
+      },
+      {
+        "Jugador": "Raphinha",
+        "Cifra": 12,
+        "Equipo": "Barcelona"
+      },
+      {
+        "Jugador": "Pedri",
+        "Cifra": 11,
+        "Equipo": "Barcelona"
+      },
+      {
+        "Jugador": "Lamine Yamal",
+        "Cifra": 11,
+        "Equipo": "Barcelona"
+      },
+      {
+        "Jugador": "Alex Baena",
+        "Cifra": 11,
+        "Equipo": "Villarreal"
+      }
+    ],
+    "Paradas": [
+      {
+        "Jugador": "Cillessen",
+        "Cifra": 17,
+        "Equipo": "Las Palmas"
+      },
+      {
+        "Jugador": "Diego Conde",
+        "Cifra": 16,
+        "Equipo": "Villarreal"
+      },
+      {
+        "Jugador": "Ørjan Haskjold",
+        "Cifra": 14,
+        "Equipo": "Barcelona"
+      },
+      {
+        "Jugador": "Juan Soriano",
+        "Cifra": 14,
+        "Equipo": "Leganés"
+      },
+      {
+        "Jugador": "Joan García",
+        "Cifra": 13,
+        "Equipo": "Espanyol"
+      }
+    ]
+  }
+  

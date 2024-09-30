@@ -1,429 +1,782 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Previa LaLiga</title>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-	<link rel="icon" href="https://www.epdata.es/favicon.ico" type="image/x-icon">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.3/html2canvas.min.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>##Titulo##</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </head>
 
 <body>
 
-	<style>
-	
-	@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap');
+    <style>
+        /* General, main y todo lo que en general abarca toda la imagen */
 
-		button {
-			margin: 0.8rem;
-			padding:0.2rem;
-			font-size:1.2rem;
-			font-weight:bold;
-			background-color: #00bcd4;
-			color: white;
-			height: 2rem;
-			width: 18rem;
-			border:#87afb1;
-		}
+        #grafico-previa-laliga {
+            font-family: 'Lucida Sans Unicode', 'Open Sans', sans-serif;
+            background-color: rgb(235, 235, 235);
+            font-family: 'Lucida Sans Unicode', 'Open Sans', sans-serif;
+            letter-spacing: -.5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            min-height: 100vh;
+        }
 
-		button:hover {
-			background-color: #8dd0d4;
-			cursor: pointer;
-		}
-	
-		button:active {
-			background-color: #007780;
-			transform: scale(0.95);
-		}
+        #imagen-previa {
+            width: 1000px;
+            height: 670px;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            /* Espacio endive main y paneles */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            /* Añadido para sombra */
+        }
 
-	</style>
+        #fondo-estadio {
+            width: 100%;
+            height: 100%;
+            background-image: url("estadios/estadios/son-moix-mallorca.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
 
-<div id="login" style="padding: 15rem">
-		<input style="transform:scale(1.5); margin: 5rem" type="password" id="passwordInput">
-		<button onclick="checkPassword()">Entrar</button>
-	</div> 
-
-<div id="content" style="display:none;">
-
-	<main style="width: 1660px; height:928px; background-color: white; text-align: center; border: 0.2px solid black;">
-		<div id="titulos"
-			style="z-index: 1; height: 13%; margin: 30px 1rem 6px 1rem; display: flex; justify-content: space-around; align-items:center;">
-
-			<div style="width:23%; height: 100%; z-index: 2;">
-				<img id="escudo1" style="transform:translate(-77px, 1px);z-index:2; height: 171%;" />
-			</div>
-			<div id="bloque-titulos" style="display:flex; flex-direction: column">
-				<h3 id="antetitulo"
-					style="color: #b8b8b8; font-family: 'Heebo'; font-size: 1.5rem; margin: 0; width: 100%;">
-					<span id="dia-semana" style="text-transform: capitalize">Antetítulo</span><span
-						id="resto-antetitulo"></span>
-				</h3>
-				<h2 id="titulo"
-					style="color: #020202; font-family: 'Heebo'; font-size: 2.5rem; margin: 0; width: 100%;">
-					Título Principal
-				</h2>
-				<h3 id="subtitulo"
-					style="color: #5e5e5e; font-family: 'Heebo'; font-size: 1.5rem; margin: 0; width: 100%;">
-					Estadísticas por partido
-				</h3>
-			</div>
-			<div style="width:23%; height: 100%; z-index: 2;">
-				<img id="escudo2" style="height: 171%;transform: translate(85px, 1px);" />
-			</div>
-		</div>
-		<div id="bloque-svg" style="width: 90%; margin:auto; height: 700px">
-
-			<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" version="1.1" x="0px" y="0px"
-				viewBox="0 0 1463.4 665.5" style="enable-background:new 0 0 1463.4 665.5;" xml:space="preserve">
-
-				<style type="text/css">
-					#Capa_1 {}
-
-					.st0 {
-						fill-rule: evenodd;
-						clip-rule: evenodd;
-						fill: #cfb4b4;
-						filter: brightness(80%)
-					}
-
-					.st1 {
-						fill-rule: evenodd;
-						clip-rule: evenodd;
-						fill: #333333;
-					}
-
-					.st2 {
-						fill-rule: evenodd;
-						clip-rule: evenodd;
-						fill: #66CC99;
-						filter: brightness(80%)
-					}
-
-					.st3 {
-						fill: none;
-						stroke: #ffffff;
-						stroke-width: 1;
-						stroke-linecap: square;
-						stroke-miterlimit: 10;
-					}
-
-					.st4 {
-						fill: none;
-						stroke: #000000;
-						stroke-width: 5;
-						stroke-miterlimit: 10;
-					}
-
-					.st5 {
-						font-family: 'Heebo';
-						font-size: 25.1934px;
-						text-align: center;
-						width: 4rem;
-						fill: white;
-						text-shadow: 2px 0px 1px rgba(0, 0, 0, 0.5);
-					}
-
-					.st6 {
-						font-family: 'Heebo';
-						font-size: 25.1934px;
-						text-align: right;
-						width: 4rem;
-						fill: white;
-						text-shadow: 2px 0px 1px rgba(0, 0, 0, 0.5);
-					}
-
-					.st7 {
-						font-size: 25.1934px;
-						font-family: 'Heebo';
-						text-align: center;
-						font-weight: bold;
-						fill: white;
-						text-shadow: 2px 0px 1px rgba(0, 0, 0, 0.5);
-					}
-
-					.st8 {
-						font-size: 25.1934px;
-						color: #00bcd4;
-						font-family: 'Heebo';
-					}
-
-					.st9 {
-						fill-rule: evenodd;
-						clip-rule: evenodd;
-						fill: #ffffff;
-						opacity: 0.5;
-					}
-				</style>
-				<rect x="1.1" y="45.5" class="st0" width="562.1" height="201.9" />
-				<rect x="901.3" y="45.5" class="st2" width="562.1" height="201.9" />
-				<rect x="1.1" y="254.4" class="st0" width="562.1" height="201.9" />
-				<rect x="901.3" y="254.4" class="st2" width="562.1" height="201.9" />
-				<rect x="1.1" y="463.3" class="st0" width="562.1" height="201.9" />
-				<rect x="901.3" y="463.3" class="st2" width="562.1" height="201.9" />
-				<rect x="1338" y="45.5" class="st9" width="130" height="640"></rect>
-				<rect x="1.1" y="45.5" class="st9" width="130" height="640"></rect>
-				<line class="st3" x1="1.1" y1="113.4" x2="563.1" y2="113.4" />
-				<line class="st3" x1="901.3" y1="113.4" x2="1463.2" y2="113.4" />
-				<line class="st3" x1="1.1" y1="179.5" x2="563.1" y2="179.5" />
-				<line class="st3" x1="901.3" y1="179.5" x2="1463.2" y2="179.5" />
-				<line class="st3" x1="1.1" y1="322.4" x2="563.1" y2="322.4" />
-				<line class="st3" x1="901.3" y1="322.4" x2="1463.2" y2="322.4" />
-				<line class="st3" x1="1.1" y1="388.5" x2="563.1" y2="388.5" />
-				<line class="st3" x1="901.3" y1="388.5" x2="1463.2" y2="388.5" />
-				<line class="st3" x1="1.1" y1="529.6" x2="563.1" y2="529.6" />
-				<line class="st3" x1="901.3" y1="529.6" x2="1463.2" y2="529.6" />
-				<line class="st3" x1="1.1" y1="597.6" x2="563.1" y2="597.6" />
-				<line class="st3" x1="901.3" y1="597.6" x2="1463.2" y2="597.6" />
-				<line class="st4" x1="443" y1="44.9" x2="443" y2="664.6" />
-				<line class="st4" x1="1019.9" y1="45.7" x2="1019.9" y2="665.5" />
-				<g>
-					<text transform="matrix(0.9994 0 0 1 339.7364 90.1907)" class="st7">Goles</text>
-				</g>
-				<text transform="matrix(0.9994 0 0 1 478.0697 90.1907)" class="st5" id="Goles_1">0</text>
-				<text transform="matrix(0.9994 0 0 1 952.7869 90.1907)" class="st6" id="Goles_2">0</text>
-				<g>
-					<text transform="matrix(0.9994 0 0 1 1059.4702 90.1907)" class="st7">Goles</text>
-				</g>
-				<g>
-					<text transform="matrix(0.9994 0 0 1 218.2236 157.4993)" class="st7">Goles esperados</text>
-				</g>
-				<text transform="matrix(0.9994 0 0 1 478.0697 157.4993)" class="st5" id="Goles_esperados_1">0</text>
-				<text transform="matrix(0.9994 0 0 1 954.7869 157.4993)" class="st6" id="Goles_esperados_2">0</text>
-				<g>
-					<text transform="matrix(0.9994 0 0 1 1058.0576 157.4993)" class="st7">Goles esperados</text>
-				</g>
-				<g>
-					<text transform="matrix(0.9994 0 0 1 304.601 224.8079)" class="st7">Remates</text>
-				</g>
-				<text transform="matrix(0.9994 0 0 1 478.0697 224.8079)" class="st5" id="Remates_1">0</text>
-				<text transform="matrix(0.9994 0 0 1 940.7869 224.8079)" class="st6" id="Remates_2">0</text>
-				<g>
-					<text transform="matrix(0.9994 0 0 1 1059.4351 224.8079)" class="st7">Remates</text>
-				</g>
-				<g>
-					<text transform="matrix(0.9994 0 0 1 228.8146 299.1145)" class="st7">Goles recibidos</text>
-				</g>
-				<text transform="matrix(0.9994 0 0 1 478.0697 299.1145)" class="st5" id="Goles_recibidos_1">0</text>
-				<text transform="matrix(0.9994 0 0 1 952.7869 299.1145)" class="st6" id="Goles_recibidos_2">0</text>
-				<g>
-					<text transform="matrix(0.9994 0 0 1 1059.6484 299.1145)" class="st7">Goles recibidos</text>
-				</g>
-				<g>
-					<text transform="matrix(0.9994 0 0 1 194.7919 366.4036)" class="st7">Remates recibidos</text>
-				</g>
-				<text transform="matrix(0.9994 0 0 1 478.0697 366.4036)" class="st5" id="Remates_recibidos_1">0</text>
-				<text transform="matrix(0.9994 0 0 1 939.7869 366.4036)" class="st6" id="Remates_recibidos_2">0</text>
-				<g>
-					<text transform="matrix(0.9994 0 0 1 1059.6255 366.4036)" class="st7">Remates recibidos</text>
-				</g>
-				<g>
-					<text transform="matrix(0.9994 0 0 1 224.4413 433.6927)" class="st7">Recuperaciones</text>
-				</g>
-				<text transform="matrix(0.9994 0 0 1 478.0697 433.6927)" class="st5"
-					id="Recuperaciones_en_campo_rival_1">0</text>
-				<text transform="matrix(0.9994 0 0 1 940.7869 433.6927)" class="st6"
-					id="Recuperaciones_en_campo_rival_2">0</text>
-				<g>
-					<text transform="matrix(0.9994 0 0 1 1060.2749 433.6927)" class="st7">Recuperaciones</text>
-				</g>
-				<g>
-					<text transform="matrix(0.9994 0 0 1 259.3935 507.9993)" class="st7">Posesión (%)</text>
-				</g>
-				<text transform="matrix(0.9994 0 0 1 478.0697 507.9993)" class="st5" id="__posesion_de_balon_1">0</text>
-				<text transform="matrix(0.9994 0 0 1 943.7869 507.9993)" class="st6" id="__posesion_de_balon_2">0</text>
-				<g>
-					<text transform="matrix(0.9994 0 0 1 1060.2271 507.9993)" class="st7">Posesión (%)</text>
-				</g>
-				<g>
-					<text transform="matrix(0.9994 0 0 1 175.9064 575.2883)" class="st7">Acierto en pases (%)</text>
-				</g>
-				<text transform="matrix(0.9994 0 0 1 478.0697 575.2883)" class="st5" id="__acierto_en_pases_1">0</text>
-				<text transform="matrix(0.9994 0 0 1 943.7869 575.2883)" class="st6" id="__acierto_en_pases_2">0</text>
-				<g>
-					<text transform="matrix(0.9994 0 0 1 1055.7397 575.2883)" class="st7">Acierto en pases (%)</text>
-				</g>
-				<text transform="matrix(0.9994 0 0 1 952.7869 640.5969)" class="st5" id="Pases_por_posesion_2">0</text>
-				<g>
-					<text transform="matrix(0.9994 0 0 1 188.3933 639.6836)" class="st7">Pases por posesión</text>
-				</g>
-				<text transform="matrix(0.9994 0 0 1 478.0697 640.6836)" class="st6" id="Pases_por_posesion_1">0</text>
-				<g>
-					<text transform="matrix(0.9994 0 0 1 1054.2273 639.6836)" class="st7">Pases por posesión</text>
-				</g>
-			</svg>
-
-			<div id="imagenes-centrales" style="width: 364px;transform: translate(566px, -659px) scale(0.94);">
-				<img src="img/ofensivo.jpg" style="width: 364px; z-index: 2; margin-bottom:0.2rem">
-				<img src="img/defensivo.jpg" style="width: 364px; z-index: 2; margin-bottom:0.2rem">
-				<img src="img/distribucion.jpg" style="width: 363px; z-index: 2;">
-			</div>
-
-		</div>
-
-		<footer style="display: flex; justify-content: space-around">
-			<p style="font-size:1.5rem; font-family: Heebo; color: #00bcd4; margin: 0px">Datos de
-				<b>Driblab</b>
-			</p>
-			<img src="img/logoepdata.jpg" style="width: 7rem;" />
-		</footer>
-
-	</main>
+        #grafico {
+            margin: 20px;
+            background-color: white;
+        }
 
 
-	<div style="padding-top: 100px; width: 80%; margin:2rem; padding-bottom: 5rem; display:flex; justify-content: space-around;">
-		<button id="descarga-imagen">Descargar imagen</button>
+        /* Cuadivo espacios principales: encabezado (logo y estado / fecha), bloque de #datos-partido (escudos/marcador + eventos) y pie de tabla con logos */
 
-		<div
-			style="text-align: center; margin-top: -50px; display: flex; align-items: center; justify-content: center;">
-			<textarea id="jsonData" style="width: 100%; height: 220px; margin-top: 2rem; font-size:1.2rem"></textarea>
-			<button id="updateContent">Actualizar datos</button>
-		</div>
+        #encabezado {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            font-size: 22px;
+            align-items: center;
+            color: #ff4b44;
+            font-weight: bold;
+        }
 
-	</div>
+        #img-laliga {
+            height: 35px;
+            padding-top: 1.4rem;
+        }
 
-	</div>
+        #datos-partido {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            z-index: 2;
+            border-top: #ff4b44 2px solid;
+            border-bottom: #ff4b44 3px solid;
+        }
 
-	<script src="main.js"></script>
+        #pie-grafico {
+            display: flex;
+            align-items: flex-end;
+            flex-direction: column;
+            width: 100%;
+            height: 52px;
+        }
+
+        #pie-grafico .logo {
+            height: auto;
+            width: 150px;
+            margin-right: 6rem;
+        }
+
+        /* Bloque superior */
+
+        #bloque-superior {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            border-bottom: #ffc3c1 solid 1.2px;
+        }
+
+        .espacio-escudo {
+            width: 130px;
+            margin-right: 2rem;
+            margin-left: 2rem;
+        }
+
+        #bloque-datos-principales {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        #bloque-datos-principales p {
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            width: 80%;
+            margin: 0 auto;
+            line-height: 2.5rem;
+        }
+
+        #fecha-partido {
+            color: black;
+            border-bottom: #e2e2e2 solid 0.2px;
+        }
+
+        #lugar-partido {
+            color: rgb(141, 141, 141)
+        }
+
+        #estadio {
+            color: rgb(191, 191, 191);
+        }
+
+        .bloque-equipo {
+            width: 100%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        #bloque-local {
+            justify-content: right;
+        }
+
+        #bloque-visitante {
+            justify-content: left;
+        }
+
+        /* Bloque inferior */
+
+        #bloque-inferior {
+            height: 300px;
+        }
 
 
-	<script>
+        #titulo-bloque-inferior {
+            height: 10%;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #ff9995;
+            text-align: center;
+            margin: 1rem 0 0 0;
+        }
 
-		function replaceDotWithComma(value) {
-			if (typeof value === 'string' || typeof value === 'number') {
-				return String(value).replace('.', ',');
-			}
-			return value;
-		}
+        #tabla-bloque-inferior {
+            width: 100%;
+            border-collapse: collapse;
+            height: 85%;
+        }
 
-		let coloresClubes = {
-			"Alavés": "#0B37A2",
-			"Girona": "#CF172F",
-			"Osasuna": "#BC131A",
-			"Barcelona": "#004999",
-			"Almería": "#ED1B24",
-			"Real Sociedad": "#0067B1",
-			"Rayo Vallecano": "#BFAE30",
-			"Las Palmas": "#FFE400",
-			"Real Betis": "#00954C",
-			"Atlético de Madrid": "#CB3524",
-			"Athletic Club": "#E20A17",
-			"Mallorca": "#C20E1A",
-			"Sevilla": "#D70F21",
-			"Celta de Vigo": "#6CADE5",
-			"Valencia": "#ff671f",
-			"Getafe": "#006DAF",
-			"Villarreal": "#00366b",
-			"Granada": "#C31632",
-			"Cádiz": "#0045A7",
-			"Real Madrid": "#7d5e9b",
-		};
 
-		let logosClubes = {
-			"Alavés": 'https://yrecio.github.io/previas-automaticas-laliga/img/logos-clubes/alaves.png',
-			"Girona": 'https://yrecio.github.io/previas-automaticas-laliga/img/logos-clubes/girona.png',
-			"Osasuna": 'https://yrecio.github.io/previas-automaticas-laliga/img/logos-clubes/osasuna.png',
-			"Barcelona": 'https://yrecio.github.io/previas-automaticas-laliga/img/logos-clubes/barcelona.png',
-			"Almería": 'https://yrecio.github.io/previas-automaticas-laliga/img/logos-clubes/ud-almeria.png',
-			"Real Sociedad": 'https://yrecio.github.io/previas-automaticas-laliga/img/logos-clubes/realsociedad.png',
-			"Rayo Vallecano": 'https://yrecio.github.io/previas-automaticas-laliga/img/logos-clubes/rayo.png',
-			"Las Palmas": 'https://yrecio.github.io/previas-automaticas-laliga/img/logos-clubes/las-palmas.png',
-			"Real Betis": 'https://yrecio.github.io/previas-automaticas-laliga/img/logos-clubes/realbetis.png',
-			"Atlético de Madrid": 'https://yrecio.github.io/previas-automaticas-laliga/img/logos-clubes/atletico.png',
-			"Athletic Club": 'https://yrecio.github.io/previas-automaticas-laliga/img/logos-clubes/athletic.png',
-			"Mallorca": 'https://yrecio.github.io/previas-automaticas-laliga/img/logos-clubes/mallorca.png',
-			"Sevilla": 'https://yrecio.github.io/previas-automaticas-laliga/img/logos-clubes/sevilla.png',
-			"Celta de Vigo": 'https://yrecio.github.io/previas-automaticas-laliga/img/logos-clubes/celta.png',
-			"Valencia": 'https://yrecio.github.io/previas-automaticas-laliga/img/logos-clubes/valencia.png',
-			"Getafe": 'https://yrecio.github.io/previas-automaticas-laliga/img/logos-clubes/getafe.png',
-			"Villarreal": 'https://yrecio.github.io/previas-automaticas-laliga/img/logos-clubes/villareal.png',
-			"Granada": 'https://yrecio.github.io/previas-automaticas-laliga/img/logos-clubes/granada.png',
-			"Cádiz": 'https://yrecio.github.io/previas-automaticas-laliga/img/logos-clubes/cadiz.png',
-			"Real Madrid": 'https://yrecio.github.io/previas-automaticas-laliga/img/logos-clubes/realmadrid.png',
-		};
 
-		document.getElementById("updateContent").addEventListener("click", function () {
-			let jsonData = document.getElementById("jsonData").value;
+        #tabla-bloque-inferior div div:not(:last-child) {
+            border-right: none;
+        }
 
-			if (jsonData) {
-				try {
-					let data = JSON.parse(jsonData);
+        .col-1,
+        .col-3 {
+            width: 10%;
+        }
 
-					document.getElementById("dia-semana").innerHTML = data.Dia;
-					document.getElementById("resto-antetitulo").innerHTML = " a las " + data.Hora + " horas";
-					document.getElementById("titulo").innerHTML = data.Equipo_1 + " vs " + data.Equipo_2;
-					document.getElementById("Goles_1").innerHTML = replaceDotWithComma(data.Goles_1);
-					document.getElementById("Goles_2").innerHTML = replaceDotWithComma(data.Goles_2);
-					document.getElementById("Goles_esperados_1").innerHTML = replaceDotWithComma(data.Goles_esperados_1);
-					document.getElementById("Goles_esperados_2").innerHTML = replaceDotWithComma(data.Goles_esperados_2);
-					document.getElementById("Remates_1").innerHTML = replaceDotWithComma(data.Remates_1);
-					document.getElementById("Remates_2").innerHTML = replaceDotWithComma(data.Remates_2);
-					document.getElementById("Goles_recibidos_1").innerHTML = replaceDotWithComma(data.Goles_recibidos_1);
-					document.getElementById("Goles_recibidos_2").innerHTML = replaceDotWithComma(data.Goles_recibidos_2);
-					document.getElementById("Remates_recibidos_1").innerHTML = replaceDotWithComma(data.Remates_recibidos_1);
-					document.getElementById("Remates_recibidos_2").innerHTML = replaceDotWithComma(data.Remates_recibidos_2);
-					document.getElementById("Recuperaciones_en_campo_rival_1").innerHTML = replaceDotWithComma(data.Recuperaciones_en_campo_rival_1);
-					document.getElementById("Recuperaciones_en_campo_rival_2").innerHTML = replaceDotWithComma(data.Recuperaciones_en_campo_rival_2);
-					document.getElementById("__posesion_de_balon_1").innerHTML = replaceDotWithComma(data.__posesion_de_balon_1) + "%";
-					document.getElementById("__posesion_de_balon_2").innerHTML = replaceDotWithComma(data.__posesion_de_balon_2) + "%";
-					document.getElementById("__acierto_en_pases_1").innerHTML = replaceDotWithComma(data.__acierto_en_pases_1) + "%";
-					document.getElementById("__acierto_en_pases_2").innerHTML = replaceDotWithComma(data.__acierto_en_pases_2) + "%";
-					document.getElementById("Pases_por_posesion_1").innerHTML = replaceDotWithComma(data.Pases_por_posesion_1);
-					document.getElementById("Pases_por_posesion_2").innerHTML = replaceDotWithComma(data.Pases_por_posesion_2);
+        .col-2 {
+            width: 60%;
+            text-align: center;
+            font-weight: bold;
+            color: #ff4b44;
+            font-size: 1.2rem;
+        }
 
-					if (coloresClubes[data.Equipo_1]) {
-						let rectsEquipo1 = document.querySelectorAll('.st0');
-						rectsEquipo1.forEach(rect => {
-							rect.style.fill = coloresClubes[data.Equipo_1];
-						});
-					}
+        #dato-goles-local {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
 
-					if (coloresClubes[data.Equipo_2]) {
-						let rectsEquipo2 = document.querySelectorAll('.st2');
-						rectsEquipo2.forEach(rect => {
-							rect.style.fill = coloresClubes[data.Equipo_2];
-						});
-					}
+        #dato-goles-visitante {
+            display: flex;
+            flex-direction: row-reverse;
+            width: 100%;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
 
-					if (logosClubes[data.Equipo_1]) {
-						document.getElementById("escudo1").src = logosClubes[data.Equipo_1];
-					}
+        .dato-promedio-goleslocal {
+            width: 90%;
+            color: #fa9d99;
+            margin: 0 24px 0 0;
+            padding: 0;
+            font-size: 1.2rem;
+            text-align: right;
+            line-height: 1.2rem;
+        }
 
-					if (logosClubes[data.Equipo_2]) {
-						document.getElementById("escudo2").src = logosClubes[data.Equipo_2];
-					}
+        .dato-promedio-golesvisitante {
+            width: 90%;
+            color: #fa9d99;
+            margin: 0 0 0 24px;
+            padding: 0;
+            font-size: 1.2rem;
+            text-align: left;
+            line-height: 1.2rem;
+        }
 
-				} catch (e) {
-					console.error("Error al parsear el JSON:", e);
-				}
-			} else {
-				console.log("Por favor, introduce datos en el textarea");
-			}
-		});
+        #dato-golescontra-local {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            width: 100%;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
 
-		document.getElementById("descarga-imagen").addEventListener("click", function () {
-			// Obtener el elemento que queremos capturar
-			let main = document.querySelector("main");
+        #dato-golescontra-visitante {
+            display: flex;
+            flex-direction: row-reverse;
+            width: 100%;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
 
-			// Usar html2canvas para obtener el canvas del elemento
-			html2canvas(main, {
-				scale: 2  // Escala el canvas al doble de su tamaño original
-			}).then(canvas => {
-				// Crear un elemento <a> para la descarga
-				let a = document.createElement("a");
-				a.href = canvas.toDataURL("image/jpg");
-				a.download = "previa.jpg";
+        .dato-promedio-golescontra {
+            width: 90%;
+            color: #fa9d99;
+            margin: 0 24px 0 0;
+            padding: 0;
+            font-size: 1.2rem;
+            text-align: left;
+            line-height: 1.2rem;
+        }
 
-				// Simular un click en el enlace para iniciar la descarga
-				a.click();
-			});
-		});
+        .dato-total-goles {
+            margin: 0;
+            padding: 0;
+            background-color: #ff4b44;
+            color: white;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bolder;
+            font-size: 1.5rem;
+            width: 2.5rem;
+            height: 2.5rem;
+        }
 
-	</script>
+
+
+        /* Paneles y botones */
+
+        #paneles {
+            width: 1000px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-bottom: 5rem;
+            align-items: center;
+            background-color: white;
+            padding: 20px 0 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #paneles label {
+            margin-bottom: 10px;
+        }
+
+        #paneles button {
+            color: white;
+            width: 40%;
+            padding: 0.5rem;
+            margin: 1rem;
+            font-size: 1rem;
+            border: 0;
+        }
+
+
+        #paneles button {
+            color: white;
+            width: 40%;
+            padding: 0.5rem;
+            margin: 1rem;
+            font-size: 1rem;
+            border: 0;
+        }
+
+        #paneles button:hover {
+            background-color: #00424a;
+            cursor: pointer;
+        }
+
+        #descarga-una-img {
+            background-color: #00bbd3;
+        }
+
+        #descarga-todas-img {
+            background-color: #017382;
+        }
+
+        #partido {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .contenedor-grafico-sectores {
+            width: 50px;
+            height: 50px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .contenedor-grafico-sectores canvas {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .dato-posesion {
+            width: 90%;
+            color: #f57a76;
+            text-align: right;
+            margin: 0 24px 0 0;
+            padding: 0;
+            font-size: 1.2rem;
+            line-height: 1.2rem;
+        }
+
+        #dato-posesion-local {
+            display: flex;
+            flex-direction: row-reverse;
+            width: 100%;
+            align-items: center;
+
+        }
+
+        #dato-posesion-visitante {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            align-items: center;
+
+        }
+
+        #dato-posesion-visitante .dato-posesion {
+            text-align: left;
+            margin: 0 0 0 24px;
+        }
+
+        .fila {
+            display: flex;
+            flex-direction: row;
+            height: 33%;
+            align-items: center;
+            border-bottom: #e4e4e4 solid 0.1px;
+
+            &:hover {
+                width: 22px;
+            }
+        }
+    </style>
+
+    <div id="grafico-previa-laliga">
+
+        <div id="imagen-previa">
+            <div id="fondo-estadio">
+                <div id="grafico">
+                    <div id="encabezado">
+                        <img id="img-laliga" src="logos/logo-laliga.png" />
+                    </div>
+                    <div id="datos-partido">
+                        <div id="bloque-superior">
+                            <div class="bloque-equipo" id="bloque-local">
+                                <div id="equipo-local">
+                                </div>
+                            </div>
+
+                            <div id="bloque-datos-principales">
+                                <p id="fecha-partido"></p>
+                                <p id="lugar-partido"></p>
+                                <p id="estadio"></p>
+                            </div>
+
+                            <div class="bloque-equipo" id="bloque-visitante">
+                                <div id="equipo-visitante">
+
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div id="bloque-inferior">
+                            <p id="titulo-bloque-inferior"></p>
+                            <div id="tabla-bloque-inferior">
+                                <div class="fila">
+                                    <div id="dato-goles-local" class="col-1">
+                                        <div class="dato-promedio-goleslocal">
+
+                                        </div>
+                                        <div class="dato-total-goles">
+
+                                        </div>
+                                    </div>
+                                    <div class="col-2">Goles</div>
+                                    <div id="dato-goles-visitante" class="col-3">
+                                        <div class="dato-promedio-golesvisitante">
+
+                                        </div>
+                                        <div class="dato-total-goles">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="fila">
+                                    <div id="dato-golescontra-local" class="col-1">
+                                        <div class="dato-promedio-goleslocal">
+                                        </div>
+                                        <div class="dato-total-goles">
+                                        </div>
+                                    </div>
+                                    <div class="col-2">Goles<br>en contra</div>
+                                    <div id="dato-golescontra-visitante" class="col-3">
+                                        <div class="dato-promedio-golesvisitante">
+                                        </div>
+                                        <div class="dato-total-goles">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="fila">
+                                    <div class="col-1" id="dato-posesion-local">
+                                        <div class="contenedor-grafico-sectores">
+                                            <canvas id="posesion-sectores-local" width="300" height="300"></canvas>
+                                        </div>
+                                        <div class="dato-posesion">
+                                        </div>
+                                    </div>
+                                    <div class="col-2">Posesión</div>
+                                    <div class="col-3" id="dato-posesion-visitante">
+                                        <div class="contenedor-grafico-sectores">
+                                            <canvas id="posesion-sectores-visitante" width="300" height="300"></canvas>
+                                        </div>
+                                        <div class="dato-posesion">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="pie-grafico">
+                    <img class="logo" src="logos/logoep.png" />
+                    <img class="logo" src="logos/logodriblab.png" />
+                </div>
+
+
+
+            </div>
+        </div>
+
+
+        <hr style="margin-top: 2rem; margin-bottom: 2rem; width: 1000px">
+        <div id="paneles">
+
+            <label for="partido" style="color:#848484">Selecciona un partido de la jornada:</label>
+            <select id="partido" name="partido">
+                <option value="">-- Selecciona un partido --</option>
+            </select>
+            <button id="descarga-una-img">Descargar esta imagen</button>
+            <button id="descarga-todas-img">Descargar todas las imágenes</button>
+        </div>
+
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    // Cargar el primer partido por defecto
+    cargarDatosPartido('partido-1');
+    cargarImagenes('partido-1');
+
+    // Añadir los partidos al selector
+    cargarSelectorPartidos();
+});
+
+function cargarDatosPartido(partidoKey) {
+    return fetch('datos/datos-previas.json') // Obtener el JSON con los datos de las previas
+        .then(response => response.json())
+        .then(partidos => {
+            const partido = partidos[partidoKey];
+            if (!partido) {
+                console.error('No se encontraron datos para el partido:', partidoKey);
+                return;
+            }
+
+            // Actualizar los textos del partido
+            document.getElementById('fecha-partido').textContent = partido['Fecha'];
+            document.getElementById('lugar-partido').textContent = partido['Dónde ver'];
+            document.getElementById('estadio').textContent = partido['Estadio'];
+
+            // Goles a favor local
+            document.querySelector('#dato-goles-local .dato-total-goles').textContent = partido['goles-total-local,'];
+            document.querySelector('#dato-goles-local .dato-promedio-goleslocal').textContent = parseFloat(partido['goles-prom-local'].replace(',', '.')).toFixed(1).replace('.', ',') + ' por partido';
+
+            // Goles a favor visitante
+            document.querySelector('#dato-goles-visitante .dato-total-goles').textContent = partido['goles-total-visitante'];
+            document.querySelector('#dato-goles-visitante .dato-promedio-golesvisitante').textContent = parseFloat(partido['goles-prom-visitante'].replace(',', '.')).toFixed(1).replace('.', ',') + ' por partido';
+
+            // Goles en contra local
+            document.querySelector('#dato-golescontra-local .dato-total-goles').textContent = partido['golescontra-total-local'];
+            document.querySelector('#dato-golescontra-local .dato-promedio-goleslocal').textContent = parseFloat(partido['golescontra-prom-local'].replace(',', '.')).toFixed(1).replace('.', ',') + ' por partido';
+
+            // Goles en contra visitante
+            document.querySelector('#dato-golescontra-visitante .dato-total-goles').textContent = partido['golescontra-total-visitante'];
+            document.querySelector('#dato-golescontra-visitante .dato-promedio-golesvisitante').textContent = parseFloat(partido['golescontra-prom-visitante'].replace(',', '.')).toFixed(1).replace('.', ',') + ' por partido';
+
+            // Posesión
+            document.querySelector('#dato-posesion-local .dato-posesion').textContent = partido['posesion-local'] + '%';
+            document.querySelector('#dato-posesion-visitante .dato-posesion').textContent = partido['posesion-visitante'] + '%';
+
+            // Cargar las imágenes correspondientes de los equipos
+            cargarImagenes(partido['Local'], partido['Visitante']);
+
+            // Actualizar gráficos, pero NO volver a redimensionar el canvas
+            const posesionLocal = parseInt(partido['posesion-local'], 10);
+            const posesionVisitante = parseInt(partido['posesion-visitante'], 10);
+            const dataLocal = [posesionLocal, 100 - posesionLocal];
+            const dataVisitante = [posesionVisitante, 100 - posesionVisitante];
+
+            // Dibujar los gráficos, solo actualizando contenido
+            const canvasLocal = document.getElementById('posesion-sectores-local');
+            const ctxLocal = canvasLocal.getContext('2d');
+            drawPieChart(ctxLocal, dataLocal, ['#ff4b44', '#bfbfbf'], canvasLocal);
+
+            const canvasVisitante = document.getElementById('posesion-sectores-visitante');
+            const ctxVisitante = canvasVisitante.getContext('2d');
+            drawPieChart(ctxVisitante, dataVisitante, ['#ff4b44', '#bfbfbf'], canvasVisitante);
+        })
+        .catch(error => console.error('Error al cargar los datos del partido:', error));
+}
+
+// Evitar redimensionar el canvas múltiples veces
+function resizeCanvasOnce(canvas, ctx) {
+    const dpi = window.devicePixelRatio || 1;
+    const style = getComputedStyle(canvas);
+
+    const width = parseFloat(style.width);
+    const height = parseFloat(style.height);
+
+    // Solo cambiar el tamaño del canvas si aún no está ajustado
+    if (canvas.width === 0 || canvas.height === 0) {
+        canvas.width = width * dpi;
+        canvas.height = height * dpi;
+
+        // Escalar el contexto para alta definición
+        ctx.scale(dpi, dpi);
+    }
+}
+
+// Función para dibujar el gráfico de sectores sin modificar el tamaño del canvas
+function drawPieChart(ctx, data, colors, canvas) {
+    // Asegurarse de que el canvas no se redimensione múltiples veces
+    resizeCanvasOnce(canvas, ctx);
+
+    const total = data.reduce((acc, value) => acc + value, 0);
+    let startAngle = 0;
+
+    data.forEach((value, index) => {
+        const sliceAngle = (value / total) * 2 * Math.PI;
+        ctx.fillStyle = colors[index];
+
+        ctx.beginPath();
+        ctx.moveTo(canvas.width / 3 / (window.devicePixelRatio || 1), canvas.height / 3 / (window.devicePixelRatio || 1));
+        ctx.arc(
+            canvas.width / 3 / (window.devicePixelRatio || 1),
+            canvas.height / 3 / (window.devicePixelRatio || 1),
+            Math.min(canvas.width / 3, canvas.height / 3) / (window.devicePixelRatio || 1),
+            startAngle,
+            startAngle + sliceAngle
+        );
+        ctx.closePath();
+        ctx.fill();
+
+        startAngle += sliceAngle;
+    });
+}
+
+function cargarImagenes(local, visitante) {
+    return fetch('datos/main.json') // Obtener el JSON con los datos de los equipos
+        .then(response => response.json())
+        .then(equipos => {
+            const equipoLocal = Object.values(equipos).find(equipo => equipo.nombre === local);
+            const equipoVisitante = Object.values(equipos).find(equipo => equipo.nombre === visitante);
+
+            if (!equipoLocal || !equipoVisitante) {
+                console.error('No se encontraron los equipos:', local, visitante);
+                return;
+            }
+
+            // Escudo del equipo local
+            const escudoLocal = document.createElement('img');
+            escudoLocal.classList.add('espacio-escudo');
+            escudoLocal.id = 'img-local';
+            escudoLocal.src = `escudos/escudos/${equipoLocal['nom-escudo-archivo']}.png`;
+            escudoLocal.alt = `Escudo ${equipoLocal.nombre}`;
+
+            // Limpiar el contenido anterior y añadir el nuevo escudo local
+            const localContainer = document.querySelector('#equipo-local');
+            localContainer.innerHTML = '';
+            localContainer.appendChild(escudoLocal);
+
+            // Escudo del equipo visitante
+            const escudoVisitante = document.createElement('img');
+            escudoVisitante.classList.add('espacio-escudo');
+            escudoVisitante.id = 'img-visitante';
+            escudoVisitante.src = `escudos/escudos/${equipoVisitante['nom-escudo-archivo']}.png`;
+            escudoVisitante.alt = `Escudo ${equipoVisitante.nombre}`;
+
+            // Limpiar el contenido anterior y añadir el nuevo escudo visitante
+            const visitanteContainer = document.querySelector('#equipo-visitante');
+            visitanteContainer.innerHTML = '';
+            visitanteContainer.appendChild(escudoVisitante);
+
+            // Actualizar el fondo del estadio
+            const fondoEstadio = document.getElementById('fondo-estadio');
+            fondoEstadio.style.backgroundImage = `url('estadios/estadios/${equipoLocal['estadio-nom-archivo']}.jpg')`;
+        })
+        .catch(error => console.error('Error al cargar las imágenes y el estadio:', error));
+}
+
+function cargarSelectorPartidos() {
+    fetch('datos/datos-previas.json')
+        .then(response => response.json())
+        .then(partidos => {
+            const selectorPartidos = document.getElementById('partido');
+            selectorPartidos.innerHTML = ''; // Limpiar el selector antes de agregar los partidos
+
+            Object.keys(partidos).forEach(partidoKey => {
+                const partido = partidos[partidoKey];
+                const option = document.createElement('option');
+                option.value = partidoKey;
+                option.textContent = `${partido.Local} vs ${partido.Visitante}`;
+                selectorPartidos.appendChild(option);
+            });
+
+            selectorPartidos.addEventListener('change', function () {
+                const partidoSeleccionado = selectorPartidos.value;
+                if (partidoSeleccionado) {
+                    cargarDatosPartido(partidoSeleccionado);
+                    cargarImagenes(partidoSeleccionado);
+                }
+            });
+        })
+        .catch(error => console.error('Error al cargar el selector de partidos:', error));
+}
+
+document.getElementById('descarga-una-img').addEventListener('click', function () {
+    const selectorPartidos = document.getElementById('partido');
+    const partidoSeleccionado = selectorPartidos.value;
+
+    if (partidoSeleccionado) {
+        fetch('datos/datos-previas.json')
+            .then(response => response.json())
+            .then(partidos => {
+                const partido = partidos[partidoSeleccionado];
+                if (partido) {
+                    downloadMainAsImageForPartido(partido); // Llama a la función para descargar la imagen
+                }
+            });
+    } else {
+        console.error('No se ha seleccionado ningún partido.');
+    }
+});
+
+document.getElementById('descarga-todas-img').addEventListener('click', downloadAllImages);
+
+function downloadAllImages() {
+fetch('datos/datos-previas.json')
+.then(response => response.json())
+.then(partidos => {
+    const keys = Object.keys(partidos);
+    let promiseChain = Promise.resolve();
+
+    keys.forEach(partidoKey => {
+        promiseChain = promiseChain
+            .then(() => cargarDatosPartido(partidoKey)) // Cargar datos del partido
+            .then(() => cargarImagenes(partidos[partidoKey].Local, partidos[partidoKey].Visitante)) // Cargar imágenes de equipos
+            .then(() => esperarCargaDeImagenes())  // Esperar a que todas las imágenes se carguen
+            .then(() => downloadMainAsImageForPartido(partidos[partidoKey])); // Descargar la imagen del partido
+    });
+})
+.catch(error => console.error('Error al descargar todas las imágenes:', error));
+}
+
+// Función para esperar a que todas las imágenes se carguen completamente
+function esperarCargaDeImagenes() {
+return new Promise((resolve) => {
+const imgLocal = document.querySelector('#img-local');
+const imgVisitante = document.querySelector('#img-visitante');
+const fondoEstadio = document.getElementById('fondo-estadio');
+
+// Esperar a que las imágenes terminen de cargarse
+const checkImagesLoaded = () => {
+    if (imgLocal.complete && imgVisitante.complete && fondoEstadio.style.backgroundImage !== "") {
+        resolve(); // Resolver la promesa cuando todas las imágenes estén cargadas
+    } else {
+        setTimeout(checkImagesLoaded, 100); // Verificar nuevamente en 100 ms
+    }
+};
+
+checkImagesLoaded();
+});
+}
+
+
+
+
+function downloadMainAsImageForPartido(partido) {
+    return new Promise((resolve, reject) => {
+        const scale = 2; // Ajustar el valor para mayor resolución
+        const nombrePartido = `${partido.Local.toLowerCase().replace(/\s/g, '-')}-vs-${partido.Visitante.toLowerCase().replace(/\s/g, '-')}.jpg`;
+
+        // Usamos el selector principal ya que el DOM se actualiza
+        html2canvas(document.querySelector('#imagen-previa'), { scale: scale })
+            .then(canvas => {
+                const link = document.createElement('a');
+                link.href = canvas.toDataURL('image/jpeg', 1.0); // Máxima calidad
+                link.download = nombrePartido;
+                link.click();
+                resolve(); // Resuelve la promesa cuando la imagen se ha descargado
+            })
+            .catch(error => {
+                console.error('Error al generar la imagen:', error);
+                reject(error); // Rechazar la promesa si hay un error
+            });
+    });
+}
+
+
+    </script>
 
 </body>
+
 
 </html>

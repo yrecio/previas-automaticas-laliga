@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>##Titulo##</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+
+<body>
+
+<style>
+   #head-grafico-medallero {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#medallero-logo {
+    height: 49px;
+}
+
+#titulo-grafico-medallero {
+    line-height: 30px;
+    color: #b4b4b4;
+}
+
+#grafico-medallero {
+    margin: 0 auto;
+    font-family: 'Lucida Sans Unicode', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#medallero-paises {
+    width: 100%;
+    margin-top: 8px;
+    border-collapse: collapse;
+}
+
+#medallero-paises th,
+#medallero-paises td {
+    height: 1.6rem;
+    text-align: center;
+    border-right: 2px solid rgb(238, 238, 238);
+}
+
+.medalla {
+    width: 32px;
+    margin-right: 12px;
+}
+
+#grafico-medallero thead {
+    border-bottom: #363636 solid 2px;
+    text-align: center;
+}
+
+.medallero-tr {
+    border-bottom: 2px solid #ffffff;
+    background-color: rgb(245, 245, 245);
+}
+
+.td-bandera {
+    display: flex;
+    align-items: center;
+}
+
+.td-bandera img {
+    width: 1.5rem;
+    margin-right: 0.5rem;
+    margin-left: 22px;
+    margin-bottom: 0;
+}
+
+#medallero-thead-titulo-total {
+    background-color: #363636;
+    color: white;
+}
+
+#medallero-thead p {
+    margin-bottom: 31px;
+    line-height: 0;
+}
+
+.highlight {
+    background-color: #e7e7e7;
+}
+
+.espana {
+    background-color: #ffe397;
+}
+
+#logo-epdata-medallero {
+    margin-top: 22px;
+    height: 32px;
+    margin-left: 32px;
+}
+
+@media (max-width: 600px) {
+    #grafico-medallero {
+        font-size: 14px;
+        padding: 5px;
+    }
+
+    #head-grafico {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #medallero-logo {
+        margin-bottom: 10px;
+    }
+
+    #medallero-paises th,
+    #medallero-paises td {
+        height: 2rem;
+        padding: 2px;
+    }
+
+    .td-bandera img {
+        width: 1rem;
+        margin-right: 0.3rem;
+    }
+
+    .td-bandera span {
+        display: none;
+    }
+}
+
+@media (max-width: 400px) {
+    #grafico-medallero {
+        font-size: 12px;
+    }
+
+    .medalla {
+        width: 24px;
+        margin-right: 8px;
+    }
+
+    #medallero-thead p {
+        margin-bottom: 20px;
+    }
+
+    #logo-epdata-medallero {
+        height: 24px;
+        margin-left: 16px;
+    }
+}
+</style>
+
+<div id="grafico-medallero">
+    <div id="head-grafico-medallero">
+        <img id="medallero-logo" src="https://https://file.epdata.es/biblioteca/7/logo-olimpiadas.png" />
+        <h2 id="titulo-grafico-medallero">MEDALLERO</h2>
+    </div>
+    <table id="medallero-paises">
+        <thead id="medallero-thead">
+            <tr>
+                <th colspan="2"></th>
+                <th class="medallero-thead"><img class="medalla" src="https://https://file.epdata.es/biblioteca/7/oro.png">
+                    <p>Oro</p>
+                </th>
+                <th class="medallero-thead"><img class="medalla" src="https://https://file.epdata.es/biblioteca/7/plata.png">
+                    <p>Plata</p>
+                </th>
+                <th class="medallero-thead"><img class="medalla" src="https://https://file.epdata.es/biblioteca/7/bronce.png">
+                    <p>Bronce</p>
+                </th>
+                <th id="medallero-thead-titulo-total">Total</th>
+            </tr>
+        </thead>
+        <tbody id="tbody-medallero">
+            <tr class="medallero-tr highlight">
+            </tr>
+            <tr class="medallero-tr highlight">
+            </tr>
+            <tr class="medallero-tr highlight">
+            </tr>
+            <tr class="medallero-tr espana">
+            </tr>
+            <tr>
+            </tr>
+        </tbody>
+    </table>
+    <img id="logo-epdata-medallero" src="https://https://file.epdata.es/biblioteca/3/logoepdata.png" />
+</div>
+
+</body>

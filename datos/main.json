@@ -1,0 +1,162 @@
+{
+    "equipo1": {
+        "nombre": "Alavés",
+        "entrenador": "Luis García Plaza​",
+        "estadio-nombre-completo": "Mendizorroza",
+        "nom-escudo-archivo": "alaves",
+        "estadio-nom-archivo": "mendizorroza-alaves",
+        "capacidad-estadio": "19840"
+    },
+    "equipo2": {
+        "nombre": "Athletic Club",
+        "entrenador": "Ernesto Valverde​",
+        "estadio-nombre-completo": "San Mamés",
+        "nom-escudo-archivo": "athletic",
+        "estadio-nom-archivo": "san-mames-athletic",
+        "capacidad-estadio": "53000"
+    },
+    "equipo3": {
+        "nombre": "Atlético de Madrid",
+        "entrenador": "Diego Simeone",
+        "estadio-nombre-completo": "Cívitas Metropolitano",
+        "nom-escudo-archivo": "atletico",
+        "estadio-nom-archivo": "civitas-metropolitano-atletico",
+        "capacidad-estadio": "70460"
+    },
+    "equipo4": {
+        "nombre": "Barcelona",
+        "entrenador": "Hans-Dieter Flick",
+        "estadio-nombre-completo": "Olímpico Lluís Companys",
+        "nom-escudo-archivo": "barcelona",
+        "estadio-nom-archivo": "lluis-companis-barca",
+        "capacidad-estadio": "49472"
+    },
+    "equipo5": {
+        "nombre": "Celta de Vigo",
+        "entrenador": "Claudio Giráldez​",
+        "estadio-nombre-completo": "Abanca-Balaídos",
+        "nom-escudo-archivo": "celta",
+        "estadio-nom-archivo": "balaidos-celta",
+        "capacidad-estadio": "24870"
+    },
+    "equipo6": {
+        "nombre": "Espanyol",
+        "entrenador": "Manolo González​",
+        "estadio-nombre-completo": "Stage Front Stadium",
+        "nom-escudo-archivo": "espanyol",
+        "estadio-nom-archivo": "rcde-stagefront-espanyol",
+        "capacidad-estadio": "40000"
+    },
+    "equipo7": {
+        "nombre": "Getafe",
+        "entrenador": "José Bordalás​",
+        "estadio-nombre-completo": "Coliseum",
+        "nom-escudo-archivo": "getafe",
+        "estadio-nom-archivo": "coliseum-getafe",
+        "capacidad-estadio": "16500"
+    },
+    "equipo8": {
+        "nombre": "Girona",
+        "entrenador": "Michel Sánchez​",
+        "estadio-nombre-completo": "Municipal de Montilivi",
+        "nom-escudo-archivo": "girona",
+        "estadio-nom-archivo": "montilivi-girona",
+        "capacidad-estadio": "14624"
+    },
+    "equipo9": {
+        "nombre": "Las Palmas",
+        "entrenador": "Luis Carrión​",
+        "estadio-nombre-completo": "Estadio de Gran Canaria",
+        "nom-escudo-archivo": "palmas",
+        "estadio-nom-archivo": "estadio-gran-canaria-palmas",
+        "capacidad-estadio": "32400"
+    },
+    "equipo10": {
+        "nombre": "Leganés",
+        "entrenador": "Borja Jiménez​",
+        "estadio-nombre-completo": "Municipal de Butarque",
+        "nom-escudo-archivo": "leganes",
+        "estadio-nom-archivo": "butarque-leganes",
+        "capacidad-estadio": "12454"
+    },
+    "equipo11": {
+        "nombre": "Mallorca",
+        "entrenador": "Jagoba Arrasate​",
+        "estadio-nombre-completo": "Mallorca Son Moix",
+        "nom-escudo-archivo": "mallorca",
+        "estadio-nom-archivo": "son-moix-mallorca",
+        "capacidad-estadio": "23142"
+    },
+    "equipo12": {
+        "nombre": "Osasuna",
+        "entrenador": "Vicente Moreno​",
+        "estadio-nombre-completo": "El Sadar",
+        "nom-escudo-archivo": "osasuna",
+        "estadio-nom-archivo": "el-sadar-osasuna",
+        "capacidad-estadio": "23576"
+    },
+    "equipo13": {
+        "nombre": "Rayo Vallecano",
+        "entrenador": "Iñigo Pérez​",
+        "estadio-nombre-completo": "Estadio de Vallecas",
+        "nom-escudo-archivo": "rayo",
+        "estadio-nom-archivo": "estadio-vallecas-rayo",
+        "capacidad-estadio": "14708"
+    },
+    "equipo14": {
+        "nombre": "Real Betis",
+        "entrenador": "Manuel Pellegrini​",
+        "estadio-nombre-completo": "Benito Villamarín",
+        "nom-escudo-archivo": "betis",
+        "estadio-nom-archivo": "benito-villamarin-betis",
+        "capacidad-estadio": "60721"
+    },
+    "equipo15": {
+        "nombre": "Real Madrid",
+        "entrenador": "Carlo Ancelotti​",
+        "estadio-nombre-completo": "Santiago Bernabéu",
+        "nom-escudo-archivo": "real-madrid",
+        "estadio-nom-archivo": "bernabeu-madrid",
+        "capacidad-estadio": "81044"
+    },
+    "equipo16": {
+        "nombre": "Real Sociedad",
+        "entrenador": "Imanol Alguacil​",
+        "estadio-nombre-completo": "Reale Arena",
+        "nom-escudo-archivo": "real-sociedad",
+        "estadio-nom-archivo": "reale-arena-real-sociedad",
+        "capacidad-estadio": "39313"
+    },
+    "equipo17": {
+        "nombre": "Valladolid",
+        "entrenador": "Paulo Pezzolano​",
+        "estadio-nombre-completo": "José Zorrilla",
+        "nom-escudo-archivo": "valladolid",
+        "estadio-nom-archivo": "jose-zorrilla-real-valladolid",
+        "capacidad-estadio": "27618"
+    },
+    "equipo18": {
+        "nombre": "Sevilla",
+        "entrenador": "Xavi García Pimienta​",
+        "estadio-nombre-completo": "Ramón Sánchez-Pizjuán",
+        "nom-escudo-archivo": "sevilla",
+        "estadio-nom-archivo": "sanchez-pijuan-sevilla",
+        "capacidad-estadio": "43883"
+    },
+    "equipo19": {
+        "nombre": "Valencia CF",
+        "entrenador": "Rubén Baraja​",
+        "estadio-nombre-completo": "Mestalla",
+        "nom-escudo-archivo": "valencia",
+        "estadio-nom-archivo": "mestalla-valencia",
+        "capacidad-estadio": "49430"
+    },
+    "equipo20": {
+        "nombre": "Villarreal",
+        "entrenador": "Marcelino García Toral​",
+        "estadio-nombre-completo": "La Cerámica",
+        "nom-escudo-archivo": "villarreal",
+        "estadio-nom-archivo": "la-ceramica-villareal",
+        "capacidad-estadio": "23500"
+    }
+}
